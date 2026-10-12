@@ -1,0 +1,26 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - _self_
+  - override hydra/job_logging: colorlog
+  - override hydra/hydra_logging: colorlog
+
+base_dtype: mxfp4e2
+
+device: 0
+
+operation: ???
+context: ??? 
+
+script: ${script:${operation}}
+
+hydra:
+  verbose: true
+  run:
+    dir: outputs/${model.name}/${base_dtype}/${operation}/${now:%Y-%m-%d}/${now:%H-%M-%S}
+
+  sweep:
+    dir: multirun/${now:%Y-%m-%d}/${now:%H-%M-%S}/${model.name}/${base_dtype}/${operation}/
+    subdir: ${hydra.job.num}

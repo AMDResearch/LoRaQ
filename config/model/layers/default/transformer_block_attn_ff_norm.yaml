@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+- '^transformer_blocks\.\d+\.norm1\.linear$'
+- '^transformer_blocks\.\d+\.norm1_context\.linear$'
+- '^transformer_blocks\.\d+\.attn\.to_q$'
+- '^transformer_blocks\.\d+\.attn\.to_k$'
+- '^transformer_blocks\.\d+\.attn\.to_v$'
+- '^transformer_blocks\.\d+\.attn\.add_q_proj$'
+- '^transformer_blocks\.\d+\.attn\.add_k_proj$'
+- '^transformer_blocks\.\d+\.attn\.add_v_proj$'
+- '^transformer_blocks\.\d+\.attn\.to_add_out$'
+- '^transformer_blocks\.\d+\.attn\.to_out\.0$'
+- '^transformer_blocks\.\d+\.ff\.net\.0\.proj$'
+- '^transformer_blocks\.\d+\.ff\.net\.2$'
+- '^transformer_blocks\.\d+\.ff_context\.net\.0\.proj$'
+- '^transformer_blocks\.\d+\.ff_context\.net\.2$'

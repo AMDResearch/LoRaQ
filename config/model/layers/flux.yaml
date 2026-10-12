@@ -1,0 +1,9 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+    - default@single_stream: single_transformer_block
+    - default@double_stream: transformer_block_attn_ff
+    - default@single_stream_norm: single_transformer_block_norm
+    - default@double_stream_norm: transformer_block_attn_ff_norm

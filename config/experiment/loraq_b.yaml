@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+
+defaults:
+  - /experiment/loraq_a
+  - /quantizer@lowrank_strategy.branch_input_quantizer: tcast
+  - _self_
+
+base_dtype: mxfp4e2
+activation_dtype: mxfp8e4
+lowrank_dtype: mxfp8e4
+
+input_quantizer:
+  dtype: ${activation_dtype}
+
+smoothing_strategy:
+  quantize_branch_input: true
+  i_base_quantizer:
+    dtype: ${activation_dtype}
+
+lowrank_strategy:
+  rank: 64
+  branch_input_quantizer:
+    dtype: ${activation_dtype}
+
+lowrank_optimizer:
+  lr: 1e-3
+  lr_rot: 1e-1

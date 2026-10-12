@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - default
+  - layers@weight_layers: pixart
+  - layers@input_layers: pixart
+  - layers/default@output_layers: none
+  - _self_
+
+name: pixart_sigma
+pipeline_name: AutoPipelineForText2Image
+
+pipeline:
+  pretrained_model_or_path: "PixArt-alpha/PixArt-Sigma-XL-2-1024-MS"
+  torch_dtype: ${torch_dtype:float16}
+
+guidance_scale: 4.5
+num_inference_steps: 20

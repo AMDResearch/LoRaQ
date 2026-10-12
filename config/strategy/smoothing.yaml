@@ -1,0 +1,18 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - /quantizer@i_base_quantizer: tcast
+  - /quantizer@w_base_quantizer: lowrank
+
+_target_: src.strategy.SmoothingSearchStrategy
+_recursive_: true
+grid:
+  _target_: src.strategy.SmoothingGrid
+  num_candidates: 20
+  one_minus: true
+  alpha_zero: true
+quantize_branch_input: false
+resume: true
+dataset_path: ${output_root_dir}/samples.pt

@@ -1,0 +1,15 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - flux_dev
+  - _self_
+
+name: flux_schnell
+
+pipeline:
+  pretrained_model_name_or_path: "black-forest-labs/FLUX.1-schnell"
+
+guidance_scale: 0.0
+num_inference_steps: 4

@@ -1,0 +1,8 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+_target_: src.calibrator.DiTCalibrator
+_recursive_: true
+strategy: ???
+valid_layers: ${model.input_layers}

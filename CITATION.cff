@@ -1,0 +1,35 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper below."
+title: "LoRaQ"
+abstract: "Code for LoRaQ: Optimized Low Rank Approximation for 4-bit Quantization."
+type: software
+authors:
+  - family-names: Bouquet
+    given-names: Yann
+    affiliation: "EPFL; Advanced Micro Devices, Inc."
+license: MIT
+repository-code: "https://github.com/AMDResearch/LoRaQ"
+preferred-citation:
+  type: conference-paper
+  title: "LoRaQ: Optimized Low Rank Approximation for 4-bit Quantization"
+  authors:
+    - family-names: Bouquet
+      given-names: Yann
+      affiliation: "EPFL"
+    - family-names: Khodamoradi
+      given-names: Alireza
+      affiliation: "Advanced Micro Devices, Inc."
+    - family-names: Shen
+      given-names: "Sophie Yáng"
+      affiliation: "Advanced Micro Devices, Inc."
+    - family-names: Denolf
+      given-names: Kristof
+      affiliation: "Advanced Micro Devices, Inc."
+    - family-names: Salzmann
+      given-names: Mathieu
+      affiliation: "EPFL"
+  collection-title: "Advances in Neural Information Processing Systems (NeurIPS)"
+  conference:
+    name: "NeurIPS 2026"
+  year: 2026
+  url: "https://arxiv.org/abs/2604.18117"

@@ -1,0 +1,10 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+- '^single_transformer_blocks\.\d+\.norm.linear$'
+- '^single_transformer_blocks\.\d+\.attn\.to_q$'
+- '^single_transformer_blocks\.\d+\.attn\.to_k$'
+- '^single_transformer_blocks\.\d+\.attn\.to_v$'
+- '^single_transformer_blocks\.\d+\.proj_mlp$'
+- '^single_transformer_blocks\.\d+\.proj_out\.linears\.\d+$'

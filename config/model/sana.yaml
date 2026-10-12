@@ -1,0 +1,22 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - default
+  - layers@weight_layers: sana
+  - layers@input_layers: sana
+  - layers/default@output_layers: none
+  - _self_
+
+name: sana
+pipeline_name: SanaPipeline
+
+pipeline:
+  pretrained_model_name_or_path: "Lawrence-cj/Sana_1600M_1024px_BF16_diffusers_ch5632"
+  torch_dtype: ${torch_dtype:bfloat16}
+  use_safetensors: true
+  variant: "bf16"
+
+guidance_scale: 4.5
+num_inference_steps: 20

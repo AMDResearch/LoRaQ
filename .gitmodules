@@ -1,0 +1,3 @@
+[submodule "third-parties/tcast"]
+	path = third-parties/tcast
+	url = https://github.com/ROCm/tensorcast.git

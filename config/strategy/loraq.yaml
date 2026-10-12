@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+defaults:
+  - /quantizer@w_base_quantizer: tcast
+  - /quantizer@lr_base_quantizer: tcast
+
+_target_: src.strategy.LoRaQStrategy
+lr_base_quantizer:
+  dtype: ${lowrank_dtype}
+optimizer: ???
+rank: 128
+batch_size: 8
+branch_input_quantizer: null
+resume: true
+saved_rank: 256

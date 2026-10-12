@@ -1,0 +1,21 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+_target_: ${evaluation.source}.Evaluator
+_recursive_: true
+_partial_: true
+metrics:
+  - _target_: ${evaluation.source}.LPIPS
+  - _target_: ${evaluation.source}.PSNR
+  - _target_: ${evaluation.source}.IR
+  - _target_: ${evaluation.source}.FID
+batch_size: 50
+num_workers: 8
+device: cuda
+cfg_dataset:
+  name: ${dataset.name}
+  max_dataset_size: ${dataset.max_dataset_size}
+  batch_size: 32
+  split: "train"
+  return_gt: true

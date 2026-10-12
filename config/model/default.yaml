@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+# SPDX-License-Identifier: MIT
+
+name: ???
+pipeline_name: ???
+num_inference_steps: 28
+width: 1024
+height: 1024
+guidance_scale: 0.0
+
+shift_activations: false
+
+input_layers: ???
+weight_layers: ???
+output_layers: ???
+
+module : src.models
+
+wrapper:
+  _target_: ${model.module}.DiTPipelineWrapper
+  _recursive_: true
+  pipeline: ${model.pipeline}
+
+pipeline:
+  _target_: diffusers.${model.pipeline_name}.from_pretrained
+  use_safetensors: true
+  torch_dtype: ???

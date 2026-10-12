@@ -1,0 +1,57 @@
+# SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
+# SPDX-FileContributor: Yann Bouquet
+
+defaults:
+  - /model: pixart_sigma
+  - /dataset: mjhq
+
+  - /calibrator@smoothing_calibrator: dit
+  - /strategy@smoothing_strategy: smoothing
+
+  - /calibrator@lowrank_calibrator: dit
+  - /strategy@lowrank_strategy: loraq
+  - /optimizer@lowrank_optimizer: rot
+
+  - /dataset@calib_dataset: coco_captains_2024
+
+  - /quantizer@input_quantizer: tcast
+  - /quantizer@weight_quantizer: tcast
+
+  - /evaluation: default
+  - _self_
+
+base_dtype: mxfp4e2
+lowrank_dtype: ${base_dtype}
+
+output_root_dir: data/${model.name}
+
+operation: calibration
+
+context: []
+
+calib_dataset:
+  max_dataset_size: 128
+  batch_size: 16
+
+smoothing_strategy:
+  dataset: ${calib_dataset}
+  num_steps: ${model.num_inference_steps}
+  guidance_scale: ${model.guidance_scale}
+  num_samples: 128
+  seed: 0
+  
+lowrank_strategy:
+  optimizer: ${lowrank_optimizer}
+  rank: 128
+
+smoothing_calibrator:
+  strategy: ${smoothing_strategy}
+  valid_layers: ${model.input_layers}
+
+lowrank_calibrator:
+  strategy: ${lowrank_strategy}
+  valid_layers: ${model.weight_layers}
+
+generation:
+  dataset: ${dataset}
+  debug: false
