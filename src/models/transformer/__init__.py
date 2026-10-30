@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: Copyright (c) 2026 Advanced Micro Devices, Inc.
 # SPDX-FileContributor: Yann Bouquet
-# SPDX-License-Identifier: MIT
+# SPDX-License-Identifier: Apache-2.0
 
 from .transformer import GenericTransformerBlockWrapper, TransformerBlockListWrapper, SingleTransformerBlockListWrapper, SingleTransformerBlockWrapper, TransformerBlockWrapper, AbstractTransformerBlockListWrapper, GenericTransformerBlockListWrapper, PixartTransformerBlockWrapper, PixartTransformerBlockListWrapper, SANATransformerBlockWrapper, SANATransformerBlockListWrapper
 

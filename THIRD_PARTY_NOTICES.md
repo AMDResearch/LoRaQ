@@ -1,6 +1,6 @@
 # Third-party notices
 
-The code in this repository is released under the MIT license (see `LICENSE`). It uses or
+The code in this repository is released under the Apache License 2.0 (see `LICENSE`). It uses or
 refers to the following third-party software and data, which keep their own licenses.
 
 ## Software
@@ -10,6 +10,7 @@ refers to the following third-party software and data, which keep their own lice
   `56c51c955f07d71eb1b42157733d173f4b20cbc0`) and used unmodified;
   `src/utils/tcast_shadow.py` adjusts two of its behaviours at import time.
 - Python dependencies listed in `requirements.txt`, under their respective licenses.
+  Notable: CLIP (`clip @ git+https://github.com/openai/CLIP.git`) is under the MIT license.
 
 ## Data
 

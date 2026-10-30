@@ -7,7 +7,7 @@ authors:
   - family-names: Bouquet
     given-names: Yann
     affiliation: "EPFL; Advanced Micro Devices, Inc."
-license: MIT
+license: Apache-2.0
 repository-code: "https://github.com/AMDResearch/LoRaQ"
 preferred-citation:
   type: conference-paper

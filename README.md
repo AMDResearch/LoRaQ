@@ -134,5 +134,5 @@ repositories are gated on the Hugging Face Hub: accept their license and run
 
 ## License
 
-MIT, Copyright (c) 2026 Advanced Micro Devices, Inc. (see `LICENSE`). Code written by Yann Bouquet.
+Apache License 2.0, Copyright 2026 Advanced Micro Devices, Inc. (see `LICENSE`). Code written by Yann Bouquet.
 Third-party software, data and models keep their own licenses: see `THIRD_PARTY_NOTICES.md`.
